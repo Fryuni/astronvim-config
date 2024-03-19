@@ -19,4 +19,6 @@ return {
   { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.completion.copilot-lua" },
+
+  { import = "astrocommunity.motion.harpoon" },
 }
