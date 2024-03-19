@@ -21,5 +21,6 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
 
   { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.gitlinker-nvim" },
   { import = "astrocommunity.motion.harpoon" },
 }
