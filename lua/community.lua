@@ -19,6 +19,7 @@ return {
   { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.editing-support.cloak-nvim" },
 
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.gitlinker-nvim" },
