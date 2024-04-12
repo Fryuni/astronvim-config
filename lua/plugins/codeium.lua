@@ -1,14 +1,15 @@
 return {
   "Exafunction/codeium.vim",
-  config = function()
-    -- Disable default codeium bindings
-    vim.g.codeium_disable_bindings = 1
-  end,
   dependencies = {
     {
       "AstroNvim/astrocore",
       ---@type AstroCoreOpts
       opts = {
+        options = {
+          g = {
+            codeium_disable_bindings = 1,
+          },
+        },
         mappings = {
           i = {
             ["<c-i>"] = {
