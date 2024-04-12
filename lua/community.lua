@@ -17,7 +17,8 @@ return {
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
 
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.cloak-nvim" },
 
   { import = "astrocommunity.git.octo-nvim" },
