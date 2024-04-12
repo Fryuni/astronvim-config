@@ -28,4 +28,6 @@ return {
   { import = "astrocommunity.git.gitlinker-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
+
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
 }
