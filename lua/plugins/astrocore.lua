@@ -1,5 +1,25 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+---@type LazySpec
+return {
+  "AstroNvim/astrocore",
+  ---@type AstroCoreOpts
+  opts = {
+    options = {
+      opt = {
+        relativenumber = true,
+        number = true,
+        wrap = true,
+      },
+    },
+    sessions = {
+      autosave = {
+        last = true,
+        cwd = true,
+      },
+    },
+  },
+}
 
+--[[
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -78,3 +98,4 @@ return {
     },
   },
 }
+]]
