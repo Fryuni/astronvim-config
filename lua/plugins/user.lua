@@ -1,4 +1,17 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+---@type LazySpec
+return {
+  {
+    "AstroNvim/astrolsp",
+    optional = true,
+    opts = {
+      autocmds = {
+        eslint_fix_on_save = false,
+      },
+    },
+  },
+}
+
+--[[
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -83,3 +96,5 @@ return {
     end,
   },
 }
+
+]]
