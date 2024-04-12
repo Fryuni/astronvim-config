@@ -30,4 +30,6 @@ return {
   { import = "astrocommunity.media.vim-wakatime" },
 
   { import = "astrocommunity.note-taking.obsidian-nvim" },
+
+  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
 }
