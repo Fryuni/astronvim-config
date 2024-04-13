@@ -1,5 +1,6 @@
 return {
   "Exafunction/codeium.vim",
+  event = "VeryLazy",
   dependencies = {
     {
       "AstroNvim/astrocore",
