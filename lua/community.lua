@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.terraform" },
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
