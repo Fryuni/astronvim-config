@@ -23,6 +23,7 @@ return {
 
   -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.editing-support.cloak-nvim" },
 
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.gitlinker-nvim" },
