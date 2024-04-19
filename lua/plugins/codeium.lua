@@ -73,6 +73,7 @@ return {
 
         local component = status.component.builder {
           provider = function() return "Codeium:" .. vim.fn["codeium#GetStatusString"]() end,
+          padding = { left = 0, right = 1 },
         }
 
         table.insert(opts.statusline, 3, component)
