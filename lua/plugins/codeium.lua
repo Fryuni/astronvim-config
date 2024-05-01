@@ -51,9 +51,11 @@ return {
 
                 if vim.g.codeium_enabled == true then
                   vim.cmd "CodeiumDisable"
+                  vim.g.codeium_enabled = false
                   notify("Disabled Codeium", vim.log.levels.WARN)
                 else
                   vim.cmd "CodeiumEnable"
+                  vim.g.codeium_enabled = true
                   notify("Disabled Codeium", vim.log.levels.WARN)
                 end
               end,
