@@ -30,7 +30,7 @@ return {
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
 
-  { import = "astrocommunity.note-taking.obsidian-nvim" },
+  -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
 }
