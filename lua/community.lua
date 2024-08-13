@@ -21,7 +21,7 @@ return {
   -- { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
-  { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.quickfix.nvim-bqf" },
 
   -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.codeium-vim" },
