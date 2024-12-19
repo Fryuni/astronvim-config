@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.typescript.dap" },
