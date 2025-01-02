@@ -28,8 +28,6 @@ return {
   -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.cloak-nvim" },
 
-  { import = "astrocommunity.git.octo-nvim" },
-  { import = "astrocommunity.git.gitlinker-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
 

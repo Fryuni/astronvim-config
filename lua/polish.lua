@@ -5,7 +5,7 @@
 -- Set up custom filetypes
 vim.filetype.add {
   extension = {
-    mdx = "markdown",
+    mdx = "mdx",
   },
   -- filename = {
   --   ["Foofile"] = "fooscript",
