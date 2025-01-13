@@ -10,11 +10,11 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.php" },
+  -- { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.zig" },
-  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.typescript.dap" },
@@ -24,10 +24,7 @@ return {
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
 
-  -- { import = "astrocommunity.completion.copilot-lua" },
-  -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.cloak-nvim" },
-
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
 
