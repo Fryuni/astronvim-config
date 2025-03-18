@@ -1,36 +1,36 @@
 return {
-  -- { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.gitlinker-nvim" },
   -- { import = "astrocommunity.git.gitgraph-nvim" },
-  {
-    "chrisgrieser/nvim-tinygit",
-    ft = { "git_rebase", "gitcommit" }, -- so ftplugins are loaded
-    dependencies = {
-      "stevearc/dressing.nvim",
-      {
-        "AstroNvim/astrocore",
-        opts = {
-          mappings = {
-            n = {
-              ["<Leader>gtc"] = {
-                function() require("tinygit").smartCommit { pushIfClean = false } end,
-                desc = "Commit",
-              },
-              ["<Leader>gtp"] = {
-                function() require("tinygit").push {} end,
-                desc = "Push",
-              },
-              ["<Leader>gtP"] = {
-                function() require("tinygit").push { forceWithLease = true } end,
-                desc = "Push Force",
-              },
-            },
-          },
-        },
-      },
-    },
-    opts = {},
-  },
+  -- {
+  --   "chrisgrieser/nvim-tinygit",
+  --   ft = { "git_rebase", "gitcommit" }, -- so ftplugins are loaded
+  --   dependencies = {
+  --     "stevearc/dressing.nvim",
+  --     {
+  --       "AstroNvim/astrocore",
+  --       opts = {
+  --         mappings = {
+  --           n = {
+  --             ["<Leader>gtc"] = {
+  --               function() require("tinygit").smartCommit { pushIfClean = false } end,
+  --               desc = "Commit",
+  --             },
+  --             ["<Leader>gtp"] = {
+  --               function() require("tinygit").push {} end,
+  --               desc = "Push",
+  --             },
+  --             ["<Leader>gtP"] = {
+  --               function() require("tinygit").push { forceWithLease = true } end,
+  --               desc = "Push Force",
+  --             },
+  --           },
+  --         },
+  --       },
+  --     },
+  --   },
+  --   opts = {},
+  -- },
   {
     "NeogitOrg/neogit",
     cmd = "Neogit",
