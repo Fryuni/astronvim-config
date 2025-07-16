@@ -13,7 +13,7 @@ return {
   { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.zig" },
+  -- { import = "astrocommunity.pack.zig" },
   -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.typescript" },
@@ -27,6 +27,7 @@ return {
   { import = "astrocommunity.editing-support.cloak-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.completion.copilot-lua" },
 
   -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
