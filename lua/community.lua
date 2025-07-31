@@ -20,6 +20,8 @@ return {
   { import = "astrocommunity.pack.typescript.dap" },
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.mdx" },
 
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
