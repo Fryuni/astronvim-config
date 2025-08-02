@@ -14,3 +14,5 @@ vim.filetype.add {
   --   ["~/%.config/foo/.*"] = "fooscript",
   -- },
 }
+
+vim.o.scrolloff = 8
