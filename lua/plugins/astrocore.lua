@@ -8,6 +8,7 @@ return {
         relativenumber = true,
         number = true,
         wrap = true,
+        scrolloff = 10,
       },
     },
     sessions = {
