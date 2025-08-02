@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 return {
   "https://gitlab.com/code-stats/code-stats-vim.git",
   config = function()
