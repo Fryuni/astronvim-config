@@ -14,20 +14,21 @@ return {
     ---@type ZenMode
     opts = {
       window = {
-        width = 0.5, -- Width of the zen window
-        height = 0.8, -- Height of the zen window
+        width = 0.7, -- Width of the zen window
+        height = 1, -- Height of the zen window
         options = {
           signcolumn = "no", -- Disable sign column
           foldcolumn = "0", -- Disable fold column
           cursorline = false, -- Disable cursor line
           colorcolumn = "0", -- Disable color column
           laststatus = 0, -- Disable status line
+          scrolloff = 5,
         },
       },
       plugins = {
         options = {
-          showcmd = false, -- Disable command line
           ruler = false, -- Disable ruler
+          showcmd = false, -- Disable command line
         },
       },
       wezterm = {
