@@ -6,7 +6,7 @@ vim.g.python3_host_prog = vim.fn.expand "~/.config/nvim/venv/bin/python"
 local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.env.LAZY or vim.loop.fs_stat(lazypath)) then
   -- stylua: ignore
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+  vim.fn.system({ "git", "clone", "--filter=tree:0", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
 vim.opt.rtp:prepend(lazypath)
 

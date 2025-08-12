@@ -30,6 +30,7 @@ return {
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.editing-support.copilotchat-nvim" },
 
   -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
