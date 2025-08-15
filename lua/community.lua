@@ -22,6 +22,7 @@ return {
   -- { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.mdx" },
+  { import = "astrocommunity.pack.sql" },
 
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
