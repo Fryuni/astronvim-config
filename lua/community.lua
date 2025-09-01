@@ -34,5 +34,6 @@ return {
 
   -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
-  -- { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+  { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
+  { import = "astrocommunity.recipes.picker-lsp-mappings" },
 }
