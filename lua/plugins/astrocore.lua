@@ -9,6 +9,7 @@ return {
         number = true,
         wrap = true,
         scrolloff = 10,
+        mouse = "",
       },
     },
     sessions = {
