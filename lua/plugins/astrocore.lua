@@ -10,6 +10,7 @@ return {
         wrap = true,
         scrolloff = 10,
         mouse = "",
+        clipboard = "unnamedplus",
       },
     },
     sessions = {
