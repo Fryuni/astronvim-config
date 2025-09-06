@@ -7,7 +7,7 @@ return {
   { "AstroNvim/astrocommunity" },
 
   -- Language packs
-  { import = "astrocommunity.pack.lua" },
+  -- { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.go" },
