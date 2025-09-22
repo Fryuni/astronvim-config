@@ -8,7 +8,7 @@ return {
         relativenumber = true,
         number = true,
         wrap = true,
-        scrolloff = 10,
+        scrolloff = 5,
         mouse = "",
         clipboard = "unnamedplus",
       },
