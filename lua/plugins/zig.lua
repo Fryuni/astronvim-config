@@ -51,11 +51,79 @@ return {
           local dap = require "dap"
           dap.configurations.zig = {
             {
-              name = "Debug test",
+              name = "ZIG: Debug test",
               type = "codelldb",
               request = "launch",
-              program = "${workspaceFolder}/zig-out/bin/test",
+              program = function()
+                -- Run `zig build test` to create the test binary if it doesn't exist
+                local build_cmd = "zig build"
+                local result = vim.fn.system(build_cmd)
+                if vim.v.shell_error ~= 0 then
+                  vim.notify("Failed to build test binary:\n" .. result, vim.log.levels.ERROR)
+                  return
+                end
+
+                return "${workspaceFolder}/zig-out/bin/test"
+              end,
               args = {},
+              cwd = "${workspaceFolder}",
+              stopOnEntry = false,
+            },
+            {
+              name = "ZIG: Debug main",
+              type = "codelldb",
+              request = "launch",
+              program = function()
+                -- Run `zig build test` to create the test binary if it doesn't exist
+                local build_cmd = "zig build"
+                local result = vim.fn.system(build_cmd)
+                if vim.v.shell_error ~= 0 then
+                  vim.notify("Failed to build binary:\n" .. result, vim.log.levels.ERROR)
+                  return
+                end
+
+                return "${workspaceFolder}/zig-out/bin/main"
+              end,
+              args = function()
+                local args = {}
+                vim.ui.input({ prompt = "Program arguments: " }, function(input)
+                  if input then
+                    for arg in string.gmatch(input, "%S+") do
+                      table.insert(args, arg)
+                    end
+                  end
+                end)
+                return args
+              end,
+              cwd = "${workspaceFolder}",
+              stopOnEntry = false,
+            },
+            {
+              name = "ZIG: Debug project",
+              type = "codelldb",
+              request = "launch",
+              program = function()
+                -- Run `zig build test` to create the test binary if it doesn't exist
+                local build_cmd = "zig build"
+                local result = vim.fn.system(build_cmd)
+                if vim.v.shell_error ~= 0 then
+                  vim.notify("Failed to build binary:\n" .. result, vim.log.levels.ERROR)
+                  return
+                end
+
+                return "${workspaceFolder}/zig-out/bin/${workspaceFolderBasename}"
+              end,
+              args = function()
+                local args = {}
+                vim.ui.input({ prompt = "Program arguments: " }, function(input)
+                  if input then
+                    for arg in string.gmatch(input, "%S+") do
+                      table.insert(args, arg)
+                    end
+                  end
+                end)
+                return args
+              end,
               cwd = "${workspaceFolder}",
               stopOnEntry = false,
             },
