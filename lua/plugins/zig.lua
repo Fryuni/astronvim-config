@@ -70,6 +70,35 @@ return {
               stopOnEntry = false,
             },
             {
+              name = "ZIG: Debug test (args)",
+              type = "codelldb",
+              request = "launch",
+              program = function()
+                -- Run `zig build test` to create the test binary if it doesn't exist
+                local build_cmd = "zig build"
+                local result = vim.fn.system(build_cmd)
+                if vim.v.shell_error ~= 0 then
+                  vim.notify("Failed to build test binary:\n" .. result, vim.log.levels.ERROR)
+                  return
+                end
+
+                return "${workspaceFolder}/zig-out/bin/test"
+              end,
+              args = function()
+                local args = {}
+                vim.ui.input({ prompt = "Program arguments: " }, function(input)
+                  if input then
+                    for arg in string.gmatch(input, "%S+") do
+                      table.insert(args, arg)
+                    end
+                  end
+                end)
+                return args
+              end,
+              cwd = "${workspaceFolder}",
+              stopOnEntry = false,
+            },
+            {
               name = "ZIG: Debug main",
               type = "codelldb",
               request = "launch",
