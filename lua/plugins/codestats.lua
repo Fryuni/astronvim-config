@@ -1,3 +1,5 @@
+if true then return {} end
+
 return {
   "https://gitlab.com/code-stats/code-stats-vim.git",
   config = function()
