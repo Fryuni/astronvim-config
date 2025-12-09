@@ -16,7 +16,7 @@ return {
   -- { import = "astrocommunity.pack.nix" },
   -- { import = "astrocommunity.pack.python" },
   -- { import = "astrocommunity.pack.terraform" },
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
