@@ -15,15 +15,14 @@ return {
   { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.nix" },
   -- { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.mdx" },
   { import = "astrocommunity.pack.sql" },
 
-  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- { import = "astrocommunity.quickfix.nvim-bqf" },
 
   { import = "astrocommunity.editing-support.cloak-nvim" },
