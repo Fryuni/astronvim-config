@@ -1,25 +1,31 @@
 ---@type LazySpec
 return {
-  "AstroNvim/astrocore",
-  ---@type AstroCoreOpts
-  opts = {
-    options = {
-      opt = {
-        relativenumber = true,
-        number = true,
-        wrap = true,
-        scrolloff = 5,
-        mouse = "",
-        clipboard = "unnamedplus",
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = {
+      options = {
+        opt = {
+          relativenumber = true,
+          number = true,
+          wrap = true,
+          scrolloff = 5,
+          mouse = "",
+          clipboard = "unnamedplus",
+        },
       },
-    },
-    sessions = {
-      autosave = {
-        last = true,
-        cwd = true,
+      sessions = {
+        autosave = {
+          last = true,
+          cwd = true,
+        },
       },
     },
   },
+  {
+    "kevinhwang91/nvim-ufo",
+    enabled = false,
+  }
 }
 
 --[[
