@@ -29,7 +29,10 @@ return {
       servers = { "tsgo" },
       ---@diagnostic disable: missing-fields
       config = {
+        tsserver = {enabled = false},
+        vtsls = {enabled = true},
         tsgo = {
+          enabled = false;
           cmd = { "tsgo", "--lsp", "--stdio" },
           filetypes = {
               "javascript",
