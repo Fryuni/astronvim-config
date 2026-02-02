@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.gleam" },
   -- { import = "astrocommunity.pack.nix" },
   -- { import = "astrocommunity.pack.python" },
   -- { import = "astrocommunity.pack.terraform" },
