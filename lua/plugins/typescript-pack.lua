@@ -1,12 +1,14 @@
 return {
   { import = "astrocommunity.lsp.nvim-lsp-file-operations" },
   {
-    "nvim-treesitter/nvim-treesitter",
+    "AstroNvim/astrocore",
     optional = true,
+    ---@type AstroCoreOpts
     opts = function(_, opts)
-      if opts.ensure_installed ~= "all" then
-        opts.ensure_installed = require("astrocore").list_insert_unique(
-          opts.ensure_installed or {},
+      opts.treesitter = opts.treesitter or {}
+      if opts.treesitter.ensure_installed ~= "all" then
+        opts.treesitter.ensure_installed = require("astrocore").list_insert_unique(
+          opts.treesitter.ensure_installed or {},
           { "javascript", "typescript", "tsx", "jsdoc" }
         )
       end
@@ -32,29 +34,24 @@ return {
         tsserver = {enabled = false},
         vtsls = {enabled = true},
         tsgo = {
-          enabled = false;
+          enabled = false,
           cmd = { "tsgo", "--lsp", "--stdio" },
           filetypes = {
-              "javascript",
-              "javascriptreact",
-              "javascript.jsx",
-              "typescript",
-              "typescriptreact",
-              "typescript.tsx",
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "typescript",
+            "typescriptreact",
+            "typescript.tsx",
           },
-          root_dir = require("lspconfig.util").root_pattern(
-            "tsconfig.json",
-            "jsconfig.json",
-            "package.json",
-            ".git"
-          ),
+          root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
           -- Add any other custom settings, on_attach functions, or capabilities here
-        }
+        },
       },
     },
   },
   -- {
-  --   "williamboman/mason-lspconfig.nvim",
+  --   "mason-org/mason-lspconfig.nvim",
   --   optional = true,
   --   opts = function(_, opts)
   --     opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed or {}, { "tsgo" })
@@ -113,7 +110,7 @@ return {
     opts = {},
   },
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     optional = true,
     opts = function(_, opts)
       if not opts.file then opts.file = {} end

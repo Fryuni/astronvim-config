@@ -1,13 +1,12 @@
--- Customize Treesitter
+-- Customize Treesitter (configured through AstroCore in v6+)
 
 ---@type LazySpec
 return {
-  "nvim-treesitter/nvim-treesitter",
+  "AstroNvim/astrocore",
+  ---@type AstroCoreOpts
   opts = {
-    ensure_installed = {
-      "lua",
-      "vim",
-      "gitcommit",
+    treesitter = {
+      ensure_installed = { "lua", "vim", "gitcommit" },
     },
   },
 }

@@ -43,19 +43,20 @@ return {
     servers = {
       -- "pyright"
     },
-    -- customize language server configuration options passed to `lspconfig`
+    -- customize language server configuration options passed to `vim.lsp.config`
     ---@diagnostic disable: missing-fields
     config = {
+      -- ["*"] = { capabilities = {}, flags = {} }, -- default config applied to every server via vim.lsp.config("*", ...)
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached
     handlers = {
-      -- a function without a key is simply the default handler, functions take two parameters, the server name and the configured options table for that server
-      -- function(server, opts) require("lspconfig")[server].setup(opts) end
+      -- the "*" key is the default handler, invoked for every server that does not have its own handler
+      -- ["*"] = function(server) vim.lsp.enable(server) end,
 
-      -- the key is the server that is being setup with `lspconfig`
+      -- per-server handlers receive only the server name; read resolved config from `vim.lsp.config[server]`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
-      -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
+      -- pyright = function(server) vim.lsp.enable(server) end, -- or a custom handler function can be passed
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
@@ -98,7 +99,7 @@ return {
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
-    -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
+    -- takes two parameters `client` and `bufnr`  (`:h lsp-config`)
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
