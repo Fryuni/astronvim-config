@@ -1,6 +1,6 @@
 # Fryuni's AstroNvim
 
-**NOTE:** This is for AstroNvim v5+
+**NOTE:** This is for AstroNvim v6
 
 ## 🛠️ Installation
 
